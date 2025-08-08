@@ -66,6 +66,19 @@ To run this project on your own machine, you will need to set up your environmen
       * Save the file. The `python-dotenv` library will automatically load this key so you don't have to hardcode it in your script.
 
 Once these steps are complete, you can run the Jupyter Notebook, and it will be able to connect to the OpenAI service to generate summaries.
+## 🚀 What's Behind the Notebook
+
+This Jupyter Notebook integrates a powerful backend stack:
+
+* **Gradio** – Powers the interactive web interface  
+* **BeautifulSoup4** – Parses HTML and extracts clean text  
+* **Requests** – Fetches raw HTML content from URLs  
+* **GPT-4o mini (OpenAI)** – Accessed via the `openai` library  
+* **Claude 3 Haiku (Anthropic)** – Accessed via the `anthropic` library  
+* **Gemini 1.5 Flash (Google)** – Accessed via the `litellm` library for unified API calls  
+* **python-dotenv** – Manages API keys securely via a local `.env` file  
+* **Python 3** – Core programming language  
+* **Jupyter Notebook** – Interactive development and demonstration environment
 
 
 Special thanks to Ed Donner for inspiring this project—his original code and insights were instrumental in shaping the AI summarization workflow
