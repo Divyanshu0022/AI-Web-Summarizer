@@ -1,22 +1,35 @@
 # AI-Web-Summarizer
 <img width="2048" height="2048" alt="Gemini_Generated_Image_y05w6sy05w6sy05w" src="https://github.com/user-attachments/assets/d6a38b63-4914-49f8-86ae-1d5eabfab15f" />
 
+This project is a Python-based tool that automatically generates a professional marketing brochure for a company based on the content of its website. It combines web scraping with the power of multiple frontier AI models (from OpenAI, Anthropic, and Google), allowing users to create marketing materials instantly through a simple web interface.
+<img width="1920" height="1080" alt="Screenshot (417)" src="https://github.com/user-attachments/assets/7e295e9d-1f11-4de6-8534-f5c3655de776" />
 
-
-
-This project is a Python-based tool that automatically generates a concise summary of any given website's content. It combines web scraping techniques with the power of a frontier AI model from OpenAI to act as a "Reader's Digest for the internet," allowing users to quickly understand the main points of a webpage without reading it in its entirety.
+### **Features 🚀**
+* **Multi-Model Support:** Choose between top-tier AI models (GPT-4o mini, Claude 3 Haiku, and Gemini 1.5 Flash) to generate content.
+* **Simple Web Interface:** Built with Gradio, the UI allows anyone to easily input a company name and URL to get started.
+* **Automated Content Extraction:** Intelligently scrapes and cleans text from any landing page, focusing only on relevant content.
+* **Real-Time Generation:** The brochure text is streamed back to the user in real-time as the AI generates it.
 
 ### **Technology Used** ⚙️
 
-  * **AI Model:** **OpenAI's GPT-4o-mini**, a powerful and efficient large language model, is used for the summarization task.
-  * **Web Scraping:**
-      * **Requests:** To fetch the raw HTML content from a URL.
-      * **BeautifulSoup4:** To parse the HTML, clean it by removing irrelevant tags (like scripts, styles, and images), and extract the core text.
-  * **Environment:**
-      * **Python 3:** The core programming language.
-      * **Jupyter Notebook:** An interactive environment for developing and demonstrating the code.
-      * **python-dotenv:** To securely manage the API key by loading it from a local `.env` file.
+- **AI Models & Libraries**
+     - **GPT-4o mini (OpenAI):** A powerful and efficient model from OpenAI, accessed via the openai library.
+     - **Claude 3 Haiku (Anthropic):** A fast and capable model from Anthropic, accessed via the anthropic library.
+     - **Gemini 1.5 Flash (Google):** A lightweight, multimodal model from Google, accessed via the litellm library for unified API calls.
 
+- **Web Interface**
+      **Gradio:** Used to create and host the interactive and user-friendly web application.
+
+- **Web Scraping**
+      **Requests:** To fetch the raw HTML content from a URL.
+      **BeautifulSoup4:** To parse the HTML, clean it by removing irrelevant tags (like scripts and styles), and extract the core text.
+
+- **Environment**
+      **Python 3:** The core programming language.
+
+- **Jupyter Notebook:** An interactive environment for developing and demonstrating the code.
+
+- **python-dotenv:** To securely manage API keys by loading them from a local .env file.
 -----
 
 ### **Workflow** 🌊
@@ -28,7 +41,8 @@ This project is a Python-based tool that automatically generates a concise summa
       * A **system prompt** that instructs the AI to act as a summarizing assistant.
       * A **user prompt** that provides the cleaned website text and asks for a summary.
 5.  **AI Summarization:** This complete prompt is sent to the OpenAI API. The GPT-4o-mini model processes the text and generates a coherent, markdown-formatted summary.
-6.  **Display Output:** The final summary is returned and displayed to the user.
+6.  **Display Output:** The final brochure is streamed back and displayed in real-time within the Gradio interface for the user to see.
+
 <img width="1852" height="611" alt="image" src="https://github.com/user-attachments/assets/3c73afc0-9c07-4fb3-a8c8-2303aa6647b4" />
 <img width="1846" height="539" alt="image" src="https://github.com/user-attachments/assets/6d44c3da-0636-4cc1-8067-54c5cb8cde1b" />
 
